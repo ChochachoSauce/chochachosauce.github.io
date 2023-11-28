@@ -10,14 +10,14 @@
             padding: 0;
             font-family: "Lucida Console", "Courier New", monospace;
             color: hotpink;
-            animation: backgroundAnimation 7s linear infinite alternate;
+            animation: backgroundAnimation 2s linear infinite alternate;
             border: 5px Ridge hotpink;
             display: flex; /* Use flex display for easier layout */
         }
 
         @keyframes backgroundAnimation {
             0% {
-                background: rgb(57, 56, 56);
+                background: rgb(123, 131, 123);
             }
             100% {
                 background: hotpink;
@@ -35,16 +35,16 @@
         }
 
         #nav-bar {
-            width: 150px;
+            width: 300px;
             height: 100%;
-            background-color: #333; /* Dark background color for the navigation bar */
+            background-color: #333333333; /* Dark background color for the navigation bar */
             position: fixed;
             top: 0;
             left: 0;
-            padding-top: 20px; /* Adjusted padding for better appearance */
+            padding-top: 35px; /* Adjusted padding for better appearance */
             display: flex;
-            flex-direction: column; /* Display items vertically */
-            align-items: center; /* Center items horizontally */
+            flex-direction: row; /* Display items vertically */
+            align-items: right; /* Center items horizontally */
             justify-content: space-around; /* Distribute items evenly vertically */
         }
 
@@ -54,7 +54,7 @@
             text-decoration: rgb(249, 37, 164) wavy underline;
             font-size: 18px;
             padding: 10px;
-            transition: background-color 0.1s; /* Smooth transition for better user experience */
+            transition: background-color 0.4s; /* Smooth transition for better user experience */
         }
 
         #nav-bar a:hover {
@@ -65,7 +65,7 @@
             margin-left: 170px; /* Adjusted for the width of the navigation bar */
             margin-top: 100px;
             text-align: center;
-            padding: 20px;
+            padding: 0px;
         }
 
         iframe {
@@ -77,9 +77,9 @@
 
         #bottom-image {
             position: fixed;
-            bottom: 0;
+            bottom: 20;
             left: 0;
-            width: 12%;
+            width: 33%;
             text-align: center;
         }
 
@@ -87,26 +87,42 @@
             width: 150px; /* Set the desired width */
             height: auto; /* Maintain aspect ratio */
         }
+
+        #bottom-image {
+            position: left;
+            bottom: 500;
+            left: 0;
+            width: 1000%;
+            text-align: bottom;
+            animation: scrollLastImage 15s linear infinite; /* Add animation to the last image */
+        }
+
+        #bottom-image img {
+            width: 100px; /* Set the desired width */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        @keyframes scrollLastImage {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
     </style>
 </head>
 <body>
     <div id="nav-bar"> 
-        <a href="#">Touch</a>
-        <a href="#">Me</a>
-        <a href="#">THANKYOU</a>
-        <a href="#">Touch</a>
-        <a href="#">Me</a>
-        <a href="#">THANKYOU</a>
-        <a href="#">Touch</a>
-        <a href="#">Me</a>
-        <a href="#">THANKYOU</a>
-        <a href="#">Touch</a>
-        <a href="#">Me</a>
-        <a href="#">THANKYOU</a>
+        <a href="#">........This</a>
+        <a href="#">is</a>
+        <a href="#">Not</a>
+        <a href="#">The</a>
+        <a href="#">End</a>
         <!-- Add more links as needed -->
     </div>
 
-    <div id="header">This is for...</div>
+    <div id="header">Open up.....</div>
 
     <div id="portfolio-container">
         <!-- Repeat the provided YouTube links -->
@@ -139,17 +155,26 @@
 
     <!-- Image at the bottom of the screen -->
     <div id="bottom-image">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frocketworm.com%2Fdownloads%2Fsprites%2Flook%2FJim_squeeze2.gif&f=1&nofb=1&ipt=6506e24ac4773d2312e00634280e42dac49571cf3ebc1bac8d6d8e751ecd4876&ipo=images" alt="Description of the image">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frocketworm.com%2Fdownloads%2Fsprites%2Flook%2FJim_squeeze2.gif&f=1&nofb=1&ipt=6506e24ac4773d2312e00634280e42dac49571cf3ebc1bac8d6d8e751ecd4876&ipo=images" alt="Description of the image">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frocketworm.com%2Fdownloads%2Fsprites%2Flook%2FJim_squeeze2.gif&f=1&nofb=1&ipt=6506e24ac4773d2312e00634280e42dac49571cf3ebc1bac8d6d8e751ecd4876&ipo=images" alt="Description of the image">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frocketworm.com%2Fdownloads%2Fsprites%2Flook%2FJim_squeeze2.gif&f=1&nofb=1&ipt=6506e24ac4773d2312e00634280e42dac49571cf3ebc1bac8d6d8e751ecd4876&ipo=images" alt="Description of the image">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frocketworm.com%2Fdownloads%2Fsprites%2Flook%2FJim_squeeze2.gif&f=1&nofb=1&ipt=6506e24ac4773d2312e00634280e42dac49571cf3ebc1bac8d6d8e751ecd4876&ipo=images" alt="Description of the image">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frocketworm.com%2Fdownloads%2Fsprites%2Flook%2FJim_squeeze2.gif&f=1&nofb=1&ipt=6506e24ac4773d2312e00634280e42dac49571cf3ebc1bac8d6d8e751ecd4876&ipo=images" alt="Description of the image">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frocketworm.com%2Fdownloads%2Fsprites%2Flook%2FJim_squeeze2.gif&f=1&nofb=1&ipt=6506e24ac4773d2312e00634280e42dac49571cf3ebc1bac8d6d8e751ecd4876&ipo=images" alt="Description of the image">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frocketworm.com%2Fdownloads%2Fsprites%2Flook%2FJim_squeeze2.gif&f=1&nofb=1&ipt=6506e24ac4773d2312e00634280e42dac49571cf3ebc1bac8d6d8e751ecd4876&ipo=images" alt="Description of the image">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frocketworm.com%2Fdownloads%2Fsprites%2Flook%2FJim_squeeze2.gif&f=1&nofb=1&ipt=6506e24ac4773d2312e00634280e42dac49571cf3ebc1bac8d6d8e751ecd4876&ipo=images" alt="Description of the image">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frocketworm.com%2Fdownloads%2Fsprites%2Flook%2FJim_squeeze2.gif&f=1&nofb=1&ipt=6506e24ac4773d2312e00634280e42dac49571cf3ebc1bac8d6d8e751ecd4876&ipo=images" alt="Description of the image">
-    </div>
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/47bf4b1c-20e0-45f4-82eb-effffb9129b0/dexdexg-7dfd8d8f-26ff-4d2f-b7a3-6942e8a402ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3YmY0YjFjLTIwZTAtNDVmNC04MmViLWVmZmZmYjkxMjliMFwvZGV4ZGV4Zy03ZGZkOGQ4Zi0yNmZmLTRkMmYtYjdhMy02OTQyZThhNDAyZWYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Bucqzvqgn9JdH_yS8aQS4r7I8yHjxQ_Wf4FUFq1w_EE" alt="Description of the image">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/47bf4b1c-20e0-45f4-82eb-effffb9129b0/dexdexg-7dfd8d8f-26ff-4d2f-b7a3-6942e8a402ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3YmY0YjFjLTIwZTAtNDVmNC04MmViLWVmZmZmYjkxMjliMFwvZGV4ZGV4Zy03ZGZkOGQ4Zi0yNmZmLTRkMmYtYjdhMy02OTQyZThhNDAyZWYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Bucqzvqgn9JdH_yS8aQS4r7I8yHjxQ_Wf4FUFq1w_EE" alt="Description of the image">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/47bf4b1c-20e0-45f4-82eb-effffb9129b0/dexdexg-7dfd8d8f-26ff-4d2f-b7a3-6942e8a402ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3YmY0YjFjLTIwZTAtNDVmNC04MmViLWVmZmZmYjkxMjliMFwvZGV4ZGV4Zy03ZGZkOGQ4Zi0yNmZmLTRkMmYtYjdhMy02OTQyZThhNDAyZWYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Bucqzvqgn9JdH_yS8aQS4r7I8yHjxQ_Wf4FUFq1w_EE" alt="Description of the image">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/47bf4b1c-20e0-45f4-82eb-effffb9129b0/dexdexg-7dfd8d8f-26ff-4d2f-b7a3-6942e8a402ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3YmY0YjFjLTIwZTAtNDVmNC04MmViLWVmZmZmYjkxMjliMFwvZGV4ZGV4Zy03ZGZkOGQ4Zi0yNmZmLTRkMmYtYjdhMy02OTQyZThhNDAyZWYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Bucqzvqgn9JdH_yS8aQS4r7I8yHjxQ_Wf4FUFq1w_EE" alt="Description of the image">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/47bf4b1c-20e0-45f4-82eb-effffb9129b0/dexdexg-7dfd8d8f-26ff-4d2f-b7a3-6942e8a402ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3YmY0YjFjLTIwZTAtNDVmNC04MmViLWVmZmZmYjkxMjliMFwvZGV4ZGV4Zy03ZGZkOGQ4Zi0yNmZmLTRkMmYtYjdhMy02OTQyZThhNDAyZWYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Bucqzvqgn9JdH_yS8aQS4r7I8yHjxQ_Wf4FUFq1w_EE" alt="Description of the image">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/47bf4b1c-20e0-45f4-82eb-effffb9129b0/dexdexg-7dfd8d8f-26ff-4d2f-b7a3-6942e8a402ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3YmY0YjFjLTIwZTAtNDVmNC04MmViLWVmZmZmYjkxMjliMFwvZGV4ZGV4Zy03ZGZkOGQ4Zi0yNmZmLTRkMmYtYjdhMy02OTQyZThhNDAyZWYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Bucqzvqgn9JdH_yS8aQS4r7I8yHjxQ_Wf4FUFq1w_EE" alt="Description of the image">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/47bf4b1c-20e0-45f4-82eb-effffb9129b0/dexdexg-7dfd8d8f-26ff-4d2f-b7a3-6942e8a402ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3YmY0YjFjLTIwZTAtNDVmNC04MmViLWVmZmZmYjkxMjliMFwvZGV4ZGV4Zy03ZGZkOGQ4Zi0yNmZmLTRkMmYtYjdhMy02OTQyZThhNDAyZWYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Bucqzvqgn9JdH_yS8aQS4r7I8yHjxQ_Wf4FUFq1w_EE" alt="Description of the image">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/47bf4b1c-20e0-45f4-82eb-effffb9129b0/dexdexg-7dfd8d8f-26ff-4d2f-b7a3-6942e8a402ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3YmY0YjFjLTIwZTAtNDVmNC04MmViLWVmZmZmYjkxMjliMFwvZGV4ZGV4Zy03ZGZkOGQ4Zi0yNmZmLTRkMmYtYjdhMy02OTQyZThhNDAyZWYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Bucqzvqgn9JdH_yS8aQS4r7I8yHjxQ_Wf4FUFq1w_EE" alt="Description of the image">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/47bf4b1c-20e0-45f4-82eb-effffb9129b0/dexdexg-7dfd8d8f-26ff-4d2f-b7a3-6942e8a402ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3YmY0YjFjLTIwZTAtNDVmNC04MmViLWVmZmZmYjkxMjliMFwvZGV4ZGV4Zy03ZGZkOGQ4Zi0yNmZmLTRkMmYtYjdhMy02OTQyZThhNDAyZWYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Bucqzvqgn9JdH_yS8aQS4r7I8yHjxQ_Wf4FUFq1w_EE" alt="Description of the image">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/47bf4b1c-20e0-45f4-82eb-effffb9129b0/dexdexg-7dfd8d8f-26ff-4d2f-b7a3-6942e8a402ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3YmY0YjFjLTIwZTAtNDVmNC04MmViLWVmZmZmYjkxMjliMFwvZGV4ZGV4Zy03ZGZkOGQ4Zi0yNmZmLTRkMmYtYjdhMy02OTQyZThhNDAyZWYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Bucqzvqgn9JdH_yS8aQS4r7I8yHjxQ_Wf4FUFq1w_EE" alt="Description of the image">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/47bf4b1c-20e0-45f4-82eb-effffb9129b0/dexdexg-7dfd8d8f-26ff-4d2f-b7a3-6942e8a402ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3YmY0YjFjLTIwZTAtNDVmNC04MmViLWVmZmZmYjkxMjliMFwvZGV4ZGV4Zy03ZGZkOGQ4Zi0yNmZmLTRkMmYtYjdhMy02OTQyZThhNDAyZWYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Bucqzvqgn9JdH_yS8aQS4r7I8yHjxQ_Wf4FUFq1w_EE" alt="Description of the image">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/47bf4b1c-20e0-45f4-82eb-effffb9129b0/dexdexg-7dfd8d8f-26ff-4d2f-b7a3-6942e8a402ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3YmY0YjFjLTIwZTAtNDVmNC04MmViLWVmZmZmYjkxMjliMFwvZGV4ZGV4Zy03ZGZkOGQ4Zi0yNmZmLTRkMmYtYjdhMy02OTQyZThhNDAyZWYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Bucqzvqgn9JdH_yS8aQS4r7I8yHjxQ_Wf4FUFq1w_EE" alt="Description of the image">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/47bf4b1c-20e0-45f4-82eb-effffb9129b0/dexdexg-7dfd8d8f-26ff-4d2f-b7a3-6942e8a402ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3YmY0YjFjLTIwZTAtNDVmNC04MmViLWVmZmZmYjkxMjliMFwvZGV4ZGV4Zy03ZGZkOGQ4Zi0yNmZmLTRkMmYtYjdhMy02OTQyZThhNDAyZWYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Bucqzvqgn9JdH_yS8aQS4r7I8yHjxQ_Wf4FUFq1w_EE" alt="Description of the image">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/47bf4b1c-20e0-45f4-82eb-effffb9129b0/dexdexg-7dfd8d8f-26ff-4d2f-b7a3-6942e8a402ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3YmY0YjFjLTIwZTAtNDVmNC04MmViLWVmZmZmYjkxMjliMFwvZGV4ZGV4Zy03ZGZkOGQ4Zi0yNmZmLTRkMmYtYjdhMy02OTQyZThhNDAyZWYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Bucqzvqgn9JdH_yS8aQS4r7I8yHjxQ_Wf4FUFq1w_EE" alt="Description of the image">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/47bf4b1c-20e0-45f4-82eb-effffb9129b0/dexdexg-7dfd8d8f-26ff-4d2f-b7a3-6942e8a402ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3YmY0YjFjLTIwZTAtNDVmNC04MmViLWVmZmZmYjkxMjliMFwvZGV4ZGV4Zy03ZGZkOGQ4Zi0yNmZmLTRkMmYtYjdhMy02OTQyZThhNDAyZWYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Bucqzvqgn9JdH_yS8aQS4r7I8yHjxQ_Wf4FUFq1w_EE" alt="Description of the image">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/47bf4b1c-20e0-45f4-82eb-effffb9129b0/dexdexg-7dfd8d8f-26ff-4d2f-b7a3-6942e8a402ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3YmY0YjFjLTIwZTAtNDVmNC04MmViLWVmZmZmYjkxMjliMFwvZGV4ZGV4Zy03ZGZkOGQ4Zi0yNmZmLTRkMmYtYjdhMy02OTQyZThhNDAyZWYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Bucqzvqgn9JdH_yS8aQS4r7I8yHjxQ_Wf4FUFq1w_EE" alt="Description of the image">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/47bf4b1c-20e0-45f4-82eb-effffb9129b0/dexdexg-7dfd8d8f-26ff-4d2f-b7a3-6942e8a402ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3YmY0YjFjLTIwZTAtNDVmNC04MmViLWVmZmZmYjkxMjliMFwvZGV4ZGV4Zy03ZGZkOGQ4Zi0yNmZmLTRkMmYtYjdhMy02OTQyZThhNDAyZWYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Bucqzvqgn9JdH_yS8aQS4r7I8yHjxQ_Wf4FUFq1w_EE" alt="Description of the image">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/47bf4b1c-20e0-45f4-82eb-effffb9129b0/dexdexg-7dfd8d8f-26ff-4d2f-b7a3-6942e8a402ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3YmY0YjFjLTIwZTAtNDVmNC04MmViLWVmZmZmYjkxMjliMFwvZGV4ZGV4Zy03ZGZkOGQ4Zi0yNmZmLTRkMmYtYjdhMy02OTQyZThhNDAyZWYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Bucqzvqgn9JdH_yS8aQS4r7I8yHjxQ_Wf4FUFq1w_EE" alt="Description of the image">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/47bf4b1c-20e0-45f4-82eb-effffb9129b0/dexdexg-7dfd8d8f-26ff-4d2f-b7a3-6942e8a402ef.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3YmY0YjFjLTIwZTAtNDVmNC04MmViLWVmZmZmYjkxMjliMFwvZGV4ZGV4Zy03ZGZkOGQ4Zi0yNmZmLTRkMmYtYjdhMy02OTQyZThhNDAyZWYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Bucqzvqgn9JdH_yS8aQS4r7I8yHjxQ_Wf4FUFq1w_EE" alt="Description of the image">
+   </div>
 
     <script>
         // You can add additional JavaScript code here if needed
