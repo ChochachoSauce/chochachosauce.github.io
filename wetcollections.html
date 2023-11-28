@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friendman's Palace</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Lucida Console", "Courier New", monospace;
+            color: hotpink;
+            animation: backgroundAnimation 7s linear infinite alternate;
+            border: 5px Ridge hotpink;
+            display: flex; /* Use flex display for easier layout */
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background: rgb(57, 56, 56);
+            }
+            100% {
+                background: hotpink;
+            }
+        }
+
+        #header {
+            position: fixed;
+            top: 10px;
+            left: 170px; /* Adjusted for the width of the navigation bar */
+            font-size: 24px;
+            font-weight: bold;
+            color: hotpink;
+            z-index: 1000;
+        }
+
+        #nav-bar {
+            width: 150px;
+            height: 100%;
+            background-color: #333; /* Dark background color for the navigation bar */
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 20px; /* Adjusted padding for better appearance */
+            display: flex;
+            flex-direction: column; /* Display items vertically */
+            align-items: center; /* Center items horizontally */
+            justify-content: space-around; /* Distribute items evenly vertically */
+        }
+
+        
+        #nav-bar a {
+            color: white;
+            text-decoration: rgb(249, 37, 164) wavy underline;
+            font-size: 18px;
+            padding: 10px;
+            transition: background-color 0.1s; /* Smooth transition for better user experience */
+        }
+
+        #nav-bar a:hover {
+            background-color: rgb(74, 4, 39);
+        }
+
+        #portfolio-container {
+            margin-left: 170px; /* Adjusted for the width of the navigation bar */
+            margin-top: 100px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        iframe {
+            width: 40%;
+            height: 40vh;
+            margin: 10px 0;
+            border: 5px Ridge hotpink;
+        }
+
+        #bottom-image {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 12%;
+            text-align: center;
+        }
+
+        #bottom-image img {
+            width: 150px; /* Set the desired width */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <div id="nav-bar"> 
+        <a href="#">Touch</a>
+        <a href="#">Me</a>
+        <a href="#">THANKYOU</a>
+        <a href="#">Touch</a>
+        <a href="#">Me</a>
+        <a href="#">THANKYOU</a>
+        <a href="#">Touch</a>
+        <a href="#">Me</a>
+        <a href="#">THANKYOU</a>
+        <a href="#">Touch</a>
+        <a href="#">Me</a>
+        <a href="#">THANKYOU</a>
+        <!-- Add more links as needed -->
+    </div>
+
+    <div id="header">This is for...</div>
+
+    <div id="portfolio-container">
+        <!-- Repeat the provided YouTube links -->
+        <iframe src="https://www.youtube.com/embed/EoPIiuuVCQs" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/CsqdUTotKBM" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/c19ErSb0i-E" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/-w8G1w64uDU" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/8o__UihJR_c" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/4Gp0Gi_jERE" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/fDhR__H-8gQ" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/5fNb9_es5xA" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/fK4mwKSnjp4" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/iMg5SZVBjbI" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/cKzEOwHWVTQ" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/J5mLaq0ZjZM" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/YRpes_irB08" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/cFnTr5ocIVA" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/Xx_0tCqnhGs" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/VoLT19Xw10c" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/S8KaTxzlseI" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/SQWmGr20Wg0" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/ux-__3I4DjM" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/42AFQL9df5M" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/8jtr2Un6TU4" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/dyB50PrZhDQ" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/ZZtOu21b9CI" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/MQMuQrEZSog" frameborder="0" allowfullscreen></iframe>
+        <!-- (Additional iframe elements here) -->
+    </div>
+
+    <!-- Image at the bottom of the screen -->
+    <div id="bottom-image">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frocketworm.com%2Fdownloads%2Fsprites%2Flook%2FJim_squeeze2.gif&f=1&nofb=1&ipt=6506e24ac4773d2312e00634280e42dac49571cf3ebc1bac8d6d8e751ecd4876&ipo=images" alt="Description of the image">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frocketworm.com%2Fdownloads%2Fsprites%2Flook%2FJim_squeeze2.gif&f=1&nofb=1&ipt=6506e24ac4773d2312e00634280e42dac49571cf3ebc1bac8d6d8e751ecd4876&ipo=images" alt="Description of the image">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frocketworm.com%2Fdownloads%2Fsprites%2Flook%2FJim_squeeze2.gif&f=1&nofb=1&ipt=6506e24ac4773d2312e00634280e42dac49571cf3ebc1bac8d6d8e751ecd4876&ipo=images" alt="Description of the image">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frocketworm.com%2Fdownloads%2Fsprites%2Flook%2FJim_squeeze2.gif&f=1&nofb=1&ipt=6506e24ac4773d2312e00634280e42dac49571cf3ebc1bac8d6d8e751ecd4876&ipo=images" alt="Description of the image">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frocketworm.com%2Fdownloads%2Fsprites%2Flook%2FJim_squeeze2.gif&f=1&nofb=1&ipt=6506e24ac4773d2312e00634280e42dac49571cf3ebc1bac8d6d8e751ecd4876&ipo=images" alt="Description of the image">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frocketworm.com%2Fdownloads%2Fsprites%2Flook%2FJim_squeeze2.gif&f=1&nofb=1&ipt=6506e24ac4773d2312e00634280e42dac49571cf3ebc1bac8d6d8e751ecd4876&ipo=images" alt="Description of the image">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frocketworm.com%2Fdownloads%2Fsprites%2Flook%2FJim_squeeze2.gif&f=1&nofb=1&ipt=6506e24ac4773d2312e00634280e42dac49571cf3ebc1bac8d6d8e751ecd4876&ipo=images" alt="Description of the image">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frocketworm.com%2Fdownloads%2Fsprites%2Flook%2FJim_squeeze2.gif&f=1&nofb=1&ipt=6506e24ac4773d2312e00634280e42dac49571cf3ebc1bac8d6d8e751ecd4876&ipo=images" alt="Description of the image">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frocketworm.com%2Fdownloads%2Fsprites%2Flook%2FJim_squeeze2.gif&f=1&nofb=1&ipt=6506e24ac4773d2312e00634280e42dac49571cf3ebc1bac8d6d8e751ecd4876&ipo=images" alt="Description of the image">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frocketworm.com%2Fdownloads%2Fsprites%2Flook%2FJim_squeeze2.gif&f=1&nofb=1&ipt=6506e24ac4773d2312e00634280e42dac49571cf3ebc1bac8d6d8e751ecd4876&ipo=images" alt="Description of the image">
+    </div>
+
+    <script>
+        // You can add additional JavaScript code here if needed
+    </script>
+</body>
+</html>
