@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=2.0">
+  <style>
+    body {
+      margin: 100;
+      overflow: hidden;
+      background-color: black;
+    }
+
+    #moving-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1000%;
+      font-size: 44px;
+      color: red;
+      animation: moveAndChange 9s linear infinite;
+    }
+
+    #ending-text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      font-size: 3px;
+      color: white;
+    }
+
+    @keyframes moveAndChange {
+      0% {
+        top: 0;
+        color: red;
+        font-size: 44px;
+      }
+      100% {
+        top: 100vh;
+        color: white;
+        font-size: 3px;
+      }
+    }
+
+    /* Skull animation (requires JavaScript) */
+    /* Add your skull image and adjust the animation as needed */
+    .skull {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-image: url('skull.png'); /* Replace 'skull.png' with your skull image */
+      background-size: cover;
+      animation: bounceSkull 2s linear infinite alternate;
+    }
+
+    @keyframes bounceSkull {
+      0% {
+        left: 0;
+      }
+      100% {
+        left: calc(100% - 500px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="moving-text">END END END END END END END END END END END</div>
+  <div id="ending-text">END</div>
+
+  <!-- Add multiple instances of .skull for multiple bouncing skulls -->
+  <div class="skull"></div>
+
+  <!-- Add more skulls as needed -->
+
+  <!-- Include JavaScript for additional functionality if necessary -->
+  <!-- <script src="your-script.js"></script> -->
+</body>
+</html>
