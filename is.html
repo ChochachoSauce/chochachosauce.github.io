@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECK IT OUT RIGHT NOW</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Comic Sans MS', cursive;
+            color: #e03ccd;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        #diamond-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 8%;
+            height: 100%;
+            background: linear-gradient(40deg, #000 70%, transparent 25%, transparent 25%, #000 75%, #000), linear-gradient(120deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
+            background-size: 50px 50px;
+            animation: scrollDiamondPattern 1s linear infinite;
+        }
+
+        @keyframes scrollDiamondPattern {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 50px 50px;
+            }
+        }
+
+        #search-results {
+            overflow-y: scroll;
+            max-height: calc(100vh - 50px);
+            padding: 10px;
+            width: 80%;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .search-result {
+            margin-bottom: 20px;
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .result-image {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            border-radius: 5px;
+            background-color: #acc456; /* Placeholder background color */
+        }
+    </style>
+</head>
+<body>
+    <div id="diamond-pattern"></div>
+    <h1>CHECK IT OUT RIGHT NOW</h1>
+    <div id="search-results">
+        <!-- Simulated Google search results -->
+        <div class="search-result">
+            <div class="result-image"></div>
+            <div>
+                <h3>Result 1</h3>
+                <p>Description for result 1. This is a placeholder text.</p>
+            </div>
+        </div>
+        <div class="search-result">
+          <div class="result-image"></div>
+          <div>
+              <h3>Result 1</h3>
+              <p>Description for result 1. This is a placeholder text.</p>
+          </div>
+      </div>
+      <div class="search-result">
+        <div class="result-image"></div>
+        <div>
+            <h3>Result 1</h3>
+            <p>Description for result 1. This is a placeholder text.</p>
+        </div>
+    </div>
+        <div class="search-result">
+          <div class="result-image"></div>
+          <div>
+              <h3>Result 1</h3>
+              <p>Description for result 1. This is a placeholder text.</p>
+          </div>
+      </div>
+      <div class="search-result">
+        <div class="result-image"></div>
+        <div>
+            <h3>Result 1</h3>
+            <p>Description for result 1. This is a placeholder text.</p>
+        </div>
+    </div>
+        <!-- Repeat this block for additional search results -->
+        <!-- ... (149 more entries) ... -->
+    </div>
+</body>
+</html>
