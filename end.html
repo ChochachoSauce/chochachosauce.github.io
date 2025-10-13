@@ -1,77 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=2.0">
-  <style>
-    body {
-      margin: 100;
-      overflow: hidden;
-      background-color: black;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Helper 2000</title>
+    <style>
+        /* Retro base styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Press Start 2P", "Courier New", monospace;
+            color: hotpink;
+            background: rgb(123, 131, 123);
+            animation: backgroundAnimation 3s linear infinite alternate;
+            border: 5px ridge hotpink;
+        }
 
-    #moving-text {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 1000%;
-      font-size: 44px;
-      color: red;
-      animation: moveAndChange 9s linear infinite;
-    }
+        @keyframes backgroundAnimation {
+            0% { background: rgb(123, 131, 123); }
+            100% { background: hotpink; }
+        }
 
-    #ending-text {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      font-size: 3px;
-      color: white;
-    }
+        /* Header */
+        #header {
+            font-size: 24px;
+            font-weight: bold;
+            color: hotpink;
+            text-align: center;
+            margin-top: 20px;
+            text-shadow: 2px 2px rgb(74, 4, 39);
+        }
 
-    @keyframes moveAndChange {
-      0% {
-        top: 0;
-        color: red;
-        font-size: 44px;
-      }
-      100% {
-        top: 100vh;
-        color: white;
-        font-size: 3px;
-      }
-    }
+        marquee {
+            color: #fff;
+            font-size: 16px;
+            margin: 10px 0;
+        }
 
-    /* Skull animation (requires JavaScript) */
-    /* Add your skull image and adjust the animation as needed */
-    .skull {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      background-image: url('skull.png'); /* Replace 'skull.png' with your skull image */
-      background-size: cover;
-      animation: bounceSkull 2s linear infinite alternate;
-    }
+        /* Navigation bar */
+        #nav-bar {
+            background-color: #222;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            border-bottom: 3px ridge hotpink;
+        }
 
-    @keyframes bounceSkull {
-      0% {
-        left: 0;
-      }
-      100% {
-        left: calc(100% - 500px);
-      }
-    }
-  </style>
+        #nav-bar a {
+            color: hotpink;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 5px 10px;
+            border: 2px groove hotpink;
+            transition: all 0.3s;
+        }
+
+        #nav-bar a:hover {
+            background-color: rgb(74, 4, 39);
+            color: #fff;
+        }
+
+        /* Main container */
+        #main-container {
+            text-align: center;
+            padding: 50px 10px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #fff;
+            text-shadow: 1px 1px hotpink;
+            margin-bottom: 20px;
+        }
+
+        /* Service tiers */
+        .tier-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .tier {
+            width: 250px;
+            padding: 20px;
+            border: 4px ridge hotpink;
+            background-color: rgba(0,0,0,0.5);
+            color: hotpink;
+            text-align: center;
+            font-size: 14px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .tier:hover {
+            transform: scale(1.05);
+            background-color: rgb(74, 4, 39);
+        }
+
+        .tier h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .tier p {
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .tier button {
+            font-family: "Press Start 2P", monospace;
+            background-color: hotpink;
+            border: 2px ridge #fff;
+            color: #000;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .tier button:hover {
+            background-color: #fff;
+            color: hotpink;
+        }
+
+        /* Bottom animated GIF strip */
+        #bottom-image {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            background-color: rgba(0,0,0,0.7);
+            border-top: 3px ridge hotpink;
+        }
+
+        #bottom-image img {
+            height: 80px;
+            margin-right: 10px;
+            animation: scrollLastImage 20s linear infinite;
+        }
+
+        @keyframes scrollLastImage {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-2000px); }
+        }
+
+    </style>
 </head>
 <body>
-  <div id="moving-text">END END END END END END END END END END END</div>
-  <div id="ending-text">END</div>
 
-  <!-- Add multiple instances of .skull for multiple bouncing skulls -->
-  <div class="skull"></div>
+    <!-- Header -->
+    <div id="header">🌀 WELCOME TO DECISION HELPER 2000 🌀</div>
+    <marquee behavior="scroll" direction="left">Helping you make the hardest choices since 1998!</marquee>
 
-  <!-- Add more skulls as needed -->
+    <!-- Navigation -->
+    <div id="nav-bar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
 
-  <!-- Include JavaScript for additional functionality if necessary -->
-  <!-- <script src="your-script.js"></script> -->
+    <!-- Main Content -->
+    <div id="main-container">
+        <h2>Select a Tier of Decision Assistance</h2>
+        <div class="tier-container">
+            <div class="tier">
+                <h3>💡 BASIC</h3>
+                <p>Quick yes/no guidance for everyday choices. Perfect for simple dilemmas!</p>
+                <button>Select Basic</button>
+            </div>
+            <div class="tier">
+                <h3>🔮 PRO</h3>
+                <p>Deep analysis and advice for more complex situations. Let us guide your thinking!</p>
+                <button>Select Pro</button>
+            </div>
+            <div class="tier">
+                <h3>🧠 ULTIMATE</h3>
+                <p>Full existential clarity package. All the insights, all the gifs, all the chaos.</p>
+                <button>Select Ultimate</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom scrolling GIFs -->
+    <div id="bottom-image">
+        <img src="https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif" alt="retro gif">
+        <img src="https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif" alt="retro gif">
+        <img src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif" alt="retro gif">
+        <img src="https://media.giphy.com/media/3o6ZsWlLzQH3X86buc/giphy.gif" alt="retro gif">
+    </div>
+
 </body>
 </html>
