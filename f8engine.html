@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FATE ENGINE</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+    /* 90s Tales from the Crypt vibe */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Press Start 2P", "Courier New", monospace;
+        color: #ffeeaa;
+        background: #2b1b0f;
+        border: 25px outset #aa5500;
+        overflow-x: hidden;
+        animation: flicker 1.5s infinite steps(2);
+    }
+
+    @keyframes flicker {
+        0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+        20%, 24%, 55% { opacity: 0.85; }
+    }
+
+    /* Glow & pulse effect */
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: radial-gradient(circle at center, rgba(255,200,0,0.1), rgba(255,100,0,0.7));
+        pointer-events: none;
+        z-index: -1;
+        animation: bgPulse 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes bgPulse {
+        0% { background-color: rgba(255,200,0,0.1); }
+        100% { background-color: rgba(255,200,0,0.3); }
+    }
+
+    /* Header */
+    #header {
+        font-size: 24px;
+        color: #ffaa00;
+        text-align: center;
+        margin-top: 20px;
+        text-shadow: 2px 2px #000, 4px 4px #aa3300;
+    }
+
+    marquee {
+        color: #ffcc00;
+        font-size: 14px;
+        text-shadow: 1px 1px #000;
+        margin: 10px 0;
+        font-weight: bold;
+    }
+
+    /* Navigation bar */
+    #nav-bar {
+        background-color: #331a00;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        border-bottom: 4px ridge #aa5500;
+        box-shadow: 0 0 20px #ff9900;
+    }
+
+    #nav-bar a {
+        color: #ffeeaa;
+        text-decoration: none;
+        font-size: 14px;
+        padding: 5px 12px;
+        border: 2px groove #aa5500;
+        background-color: #4b2b0f;
+        transition: all 0.2s ease-in-out;
+    }
+
+    #nav-bar a:hover {
+        background-color: #aa5500;
+        color: #000;
+        box-shadow: 0 0 15px #ffcc00;
+    }
+
+    /* Main */
+    #main-container {
+        text-align: center;
+        padding: 50px 10px;
+    }
+
+    h2 {
+        color: #ffeeaa;
+        text-shadow: 1px 1px #aa3300;
+        font-size: 16px;
+    }
+
+    /* Tiers */
+    .tier-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .tier {
+        width: 240px;
+        padding: 20px;
+        border: 4px ridge #aa5500;
+        background-color: rgba(70, 30, 10, 0.9);
+        color: #ffeeaa;
+        text-align: center;
+        font-size: 10px;
+        transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .tier:hover {
+        transform: scale(1.05);
+        background-color: rgba(255, 136, 0, 0.9);
+        box-shadow: 0 0 25px #ffcc33;
+    }
+
+    .tier button {
+        font-family: "Press Start 2P", monospace;
+        background-color: #aa5500;
+        border: 2px ridge #ffeeaa;
+        color: #ffeeaa;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 10px;
+        transition: all 0.3s;
+    }
+
+    .tier button:hover {
+        background-color: #ffeeaa;
+        color: #aa5500;
+        transform: translateY(-2px);
+    }
+
+    /* Scrolling GIF Strip */
+    #bottom-image {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        background-color: rgba(40, 20, 0, 0.9);
+        border-top: 3px ridge #aa5500;
+    }
+
+    #bottom-image .gif-row {
+        display: flex;
+        width: max-content;
+        animation: scrollGifs 20s linear infinite;
+    }
+
+    #bottom-image img {
+        height: 80px;
+        margin-right: 10px;
+        filter: sepia(0.9) saturate(1.3);
+    }
+
+    @keyframes scrollGifs {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+    }
+</style>
+</head>
+<body>
+
+    <div id="header">💀 FATE ENGINE 💀</div>
+    <marquee behavior="alternate">THE SHADOWS KNOW YOUR CHOICE...</marquee>
+
+    <div id="nav-bar">
+        <a href="#">DISCLAIMER</a>
+        <a href="#">HOME</a>
+        <a href="#">CONTACT</a>
+    </div>
+
+    <div id="main-container">
+        <h2>CHOOSE YOUR FATE</h2>
+        <div class="tier-container">
+            <div class="tier">
+                <h3>☠️ Toss a Skull ☠️</h3>
+                <p>Drop your question into the crypt...</p>
+                <p>Will the spirits answer, or keep their secret?</p>
+                <p>FREE</p>
+                <button>Select</button>
+            </div>
+            <div class="tier">
+                <h3>🔥 Per Capsulam 🔥</h3>
+                <p>Offer your coin...</p>
+                <p>Receive what fate allows</p>
+                <p>$4.20</p>
+                <button>Select</button>
+            </div>
+            <div class="tier">
+                <h3>💀 Bona Fide 💀</h3>
+                <p>A serious plea to the spirits</p>
+                <p>Pay what you will</p>
+                <p>Set Your Price</p>
+                <button>Select</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="bottom-image">
+        <div class="gif-row" id="gifRow"></div>
+    </div>
+
+    <script>
+        // Duplicate GIFs
+        const gifSrc = "https://i.imgur.com/c5GEIj2.gif"; // Replace with creepy 90s GIFs if desired
+        const row = document.getElementById("gifRow");
+        for (let i = 0; i < 40; i++) {
+            const img = document.createElement("img");
+            img.src = gifSrc;
+            img.alt = "retro gif";
+            row.appendChild(img);
+        }
+
+        // Soft reactive background hue
+        document.addEventListener("mousemove", e => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            const r = 255;
+            const g = 180 + (y * 50);
+            const b = 50 + (x * 50);
+            document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        });
+    </script>
+
+</body>
+</html>
