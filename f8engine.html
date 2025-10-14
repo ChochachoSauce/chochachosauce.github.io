@@ -164,12 +164,32 @@
         from { transform: translateX(0); }
         to { transform: translateX(-50%); }
     }
+
+#secret-line {
+    font-weight: bold;
+    background: linear-gradient(90deg, lime, yellow, cyan, magenta, lime);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s linear infinite;
+    text-shadow: 1px 1px #000;
+}
+
+@keyframes shimmer {
+    0% { background-position: 0%; }
+    100% { background-position: 300%; }
+}
+
+    
+}
 </style>
 </head>
 <body>
 
-    <div id="header">💀 FATE ENGINE 💀</div>
-    <marquee behavior="alternate">THE SHADOWS KNOW YOUR CHOICE...</marquee>
+<div id="header">
+    <a href="https://chochachosauce.github.io/f8engine.html" style="text-decoration: none; color: inherit;">💀 FATE ENGINE 💀</a>
+</div>
+    <marquee behavior="alternate">FUCK YOU</marquee>
 
     <div id="nav-bar">
         <a href="https://chochachosauce.github.io/disclaimer.html">DISCLAIMER</a>
@@ -184,23 +204,20 @@
                 <h3>☠️ Toss a Skull ☠️</h3>
                 <p>Drop your question into the crypt...</p>
                 <p>Will the spirits answer, or keep their secret?</p>
-                <p>FREE</p>
-                <button>Select</button>
-            </div>
+                <p id="secret-line">FREE</p>
+                <button onclick="window.location.href='toss-a-skull.html'">Select</button>            </div>
             <div class="tier">
                 <h3>🔥 Per Capsulam 🔥</h3>
                 <p>Offer your coin...</p>
                 <p>Receive what fate allows</p>
-                <p>$4.20</p>
-                <button>Select</button>
-            </div>
+                <p id="secret-line">$4.20</p>
+                <button onclick="window.location.href='toss-a-skull.html'">Select</button>            </div>
             <div class="tier">
                 <h3>💀 Bona Fide 💀</h3>
                 <p>A serious plea to the spirits</p>
                 <p>Pay what you will</p>
-                <p>Set Your Price</p>
-                <button>Select</button>
-            </div>
+                <p id="secret-line">Set Your Price</p>
+                <button onclick="window.location.href='toss-a-skull.html'">Select</button>            </div>
         </div>
     </div>
 
