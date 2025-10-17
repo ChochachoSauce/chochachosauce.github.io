@@ -112,6 +112,7 @@
         text-align: center;
         font-size: 10px;
         transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+        cursor: pointer;
     }
 
     .tier:hover {
@@ -129,6 +130,7 @@
         cursor: pointer;
         font-size: 10px;
         transition: all 0.3s;
+        margin-top: 10px;
     }
 
     .tier button:hover {
@@ -165,23 +167,20 @@
         to { transform: translateX(-50%); }
     }
 
-#secret-line {
-    font-weight: bold;
-    background: linear-gradient(90deg, lime, yellow, cyan, magenta, lime);
-    background-size: 300%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shimmer 4s linear infinite;
-    text-shadow: 1px 1px #000;
-}
+    #secret-line {
+        font-weight: bold;
+        background: linear-gradient(90deg, lime, yellow, cyan, magenta, lime);
+        background-size: 300%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shimmer 4s linear infinite;
+        text-shadow: 1px 1px #000;
+    }
 
-@keyframes shimmer {
-    0% { background-position: 0%; }
-    100% { background-position: 300%; }
-}
-
-    
-}
+    @keyframes shimmer {
+        0% { background-position: 0%; }
+        100% { background-position: 300%; }
+    }
 </style>
 </head>
 <body>
@@ -189,63 +188,66 @@
 <div id="header">
     <a href="https://chochachosauce.github.io/f8engine.html" style="text-decoration: none; color: inherit;">💀 FATE ENGINE 💀</a>
 </div>
-    <marquee behavior="alternate">FUCK YOU</marquee>
+<marquee behavior="alternate">FUCK YOU</marquee>
 
-    <div id="nav-bar">
-        <a href="https://chochachosauce.github.io/disclaimer.html">DISCLAIMER</a>
-        <a href="https://chochachosauce.github.io/crypt.html">HOME</a>
-        <a href="https://chochachosauce.github.io/contact.html">CONTACT</a>
+<div id="nav-bar">
+    <a href="https://chochachosauce.github.io/disclaimer.html">DISCLAIMER</a>
+    <a href="https://chochachosauce.github.io/crypt.html">HOME</a>
+    <a href="https://chochachosauce.github.io/contact.html">CONTACT</a>
+</div>
+
+<div id="main-container">
+    <h2>CHOOSE YOUR FATE</h2>
+    <div class="tier-container">
+        <div class="tier" onclick="window.location.href='https://chochachosauce.github.io/free.html'">
+            <h3>☠️ Toss a Skull ☠️</h3>
+            <p>Drop your question into the crypt...</p>
+            <p>Will the spirits answer, or keep their secret?</p>
+            <p id="secret-line">FREE</p>
+            <button>Select</button>
+        </div>
+        <div class="tier" onclick="window.location.href='https://chochachosauce.github.io/69420.html'">
+            <h3>🔥 Per Capsulam 🔥</h3>
+            <p>Offer your coin...</p>
+            <p>Receive what fate allows</p>
+            <p id="secret-line">$4.20</p>
+            <button>Select</button>
+        </div>
+        <div class="tier" onclick="window.location.href='https://chochachosauce.github.io/69420.html'">
+            <h3>💀 Bona Fide 💀</h3>
+            <p>A serious plea to the spirits</p>
+            <p>Pay what you will</p>
+            <p id="secret-line">Set Your Price</p>
+            <button>Select</button>
+        </div>
     </div>
+</div>
 
-    <div id="main-container">
-        <h2>CHOOSE YOUR FATE</h2>
-        <div class="tier-container">
-            <div class="tier">
-                <h3>☠️ Toss a Skull ☠️</h3>
-                <p>Drop your question into the crypt...</p>
-                <p>Will the spirits answer, or keep their secret?</p>
-                <p id="secret-line">FREE</p>
-        <button onclick="window.location.href='https://chochachosauce.github.io/free.html'">Select</button>
-                <div class="tier">
-                <h3>🔥 Per Capsulam 🔥</h3>
-                <p>Offer your coin...</p>
-                <p>Receive what fate allows</p>
-                <p id="secret-line">$4.20</p>
-        <button onclick="window.location.href='https://chochachosauce.github.io/69420.html'">Select</button>
-                    <div class="tier">
-                <h3>💀 Bona Fide 💀</h3>
-                <p>A serious plea to the spirits</p>
-                <p>Pay what you will</p>
-                <p id="secret-line">Set Your Price</p>
-        <button onclick="window.location.href='https://chochachosauce.github.io/69420.html'">Select</button>
-                    </div>
-    </div>
+<div id="bottom-image">
+    <div class="gif-row" id="gifRow"></div>
+</div>
 
-    <div id="bottom-image">
-        <div class="gif-row" id="gifRow"></div>
-    </div>
+<script>
+    // Duplicate GIFs
+    const gifSrc = "https://i.imgur.com/c5GEIj2.gif";
+    const row = document.getElementById("gifRow");
+    for (let i = 0; i < 40; i++) {
+        const img = document.createElement("img");
+        img.src = gifSrc;
+        img.alt = "retro gif";
+        row.appendChild(img);
+    }
 
-    <script>
-        // Duplicate GIFs
-        const gifSrc = "https://i.imgur.com/c5GEIj2.gif"; // Replace with creepy 90s GIFs if desired
-        const row = document.getElementById("gifRow");
-        for (let i = 0; i < 40; i++) {
-            const img = document.createElement("img");
-            img.src = gifSrc;
-            img.alt = "retro gif";
-            row.appendChild(img);
-        }
-
-        // Soft reactive background hue
-        document.addEventListener("mousemove", e => {
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
-            const r = 255;
-            const g = 180 + (y * 50);
-            const b = 50 + (x * 50);
-            document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-        });
-    </script>
+    // Soft reactive background hue
+    document.addEventListener("mousemove", e => {
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+        const r = 255;
+        const g = 180 + (y * 50);
+        const b = 50 + (x * 50);
+        document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    });
+</script>
 
 </body>
 </html>
