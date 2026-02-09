@@ -117,9 +117,13 @@ body {
     width: 32px;
     height: 32px;
     margin: 0 auto 4px;
-    background: linear-gradient(135deg, #808080, #c0c0c0);
     border: 1px solid #fff;
 }
+
+/* Assign unique colors for icons */
+.icon[data-win="w1"] .ico { background:#ffcc00; }
+.icon[data-win="w2"] .ico { background:#00ccff; }
+.icon[data-win="w3"] .ico { background:#ff66cc; }
 
 /* ===== WINDOWS ===== */
 .window {
@@ -141,6 +145,19 @@ body {
     justify-content: space-between;
     padding: 0 4px;
     cursor: move;
+}
+
+.titlebar .title {
+    display: flex;
+    align-items: center;
+}
+
+.win-icon {
+    display:inline-block;
+    width:16px; height:16px;
+    border:1px solid #000;
+    margin-right:4px;
+    vertical-align:middle;
 }
 
 .sysbuttons button {
@@ -237,6 +254,13 @@ input, textarea {
     font-size: 11px;
     cursor: pointer;
     box-shadow: inset -1px -1px #808080, inset 1px 1px #ffffff;
+    display:flex;
+    align-items:center;
+}
+.taskbar-windows .tbwin .tb-icon {
+    width:12px; height:12px;
+    border:1px solid #000;
+    margin-right:4px;
 }
 .taskbar-windows .tbwin:active {
     box-shadow: inset 1px 1px #808080, inset -1px -1px #ffffff;
@@ -248,11 +272,11 @@ input, textarea {
 <!-- LOGIN SCREEN -->
 <div id="loginScreen">
     <div class="login-container">
-        <div class="login-logo">ACME CORP</div>
+        <div class="login-logo">Fate Engine</div>
         <form id="loginForm">
             <input type="text" name="username" placeholder="Username" required><br>
             <input type="password" name="password" placeholder="Password" required><br>
-            <button type="submit">Log In</button>
+            <button type="submit">Click Here to Enter</button>
         </form>
     </div>
 </div>
@@ -260,83 +284,48 @@ input, textarea {
 <!-- DESKTOP -->
 <div id="desktop">
     <div class="desktop">
-        <div class="icon" data-win="w1"><div class="ico"></div>Program 1</div>
-        <div class="icon" data-win="w2"><div class="ico"></div>Program 2</div>
-        <div class="icon" data-win="w3"><div class="ico"></div>Program 3</div>
+        <div class="icon" data-win="w1"><div class="ico"></div>Free Advice</div>
+        <div class="icon" data-win="w2"><div class="ico"></div>Low Cost</div>
+        <div class="icon" data-win="w3"><div class="ico"></div>Sliding Scale</div>
     </div>
 
     <!-- PROGRAM WINDOWS -->
     <div class="window" id="w1" style="top:120px; left:300px; width:300px;">
         <div class="titlebar">
-            <div class="title">Program 1</div>
-            <div class="sysbuttons">
-                <button onclick="hideWin(this)">_</button>
-                <button onclick="closeWin(this)">X</button>
-            </div>
+            <div class="title"><div class="win-icon" style="background:#ffcc00"></div>Free Advice</div>
+            <div class="sysbuttons"><button onclick="hideWin(this)">_</button><button onclick="closeWin(this)">X</button></div>
         </div>
-        <div class="content">
-            Line 1<br>Line 2<br>Line 3<br>Line 4<br>
-            <button class="btn" onclick="openSurvey()">OK</button>
-        </div>
+        <div class="content">Line 1<br>Line 2<br>Line 3<br>Line 4<br><button class="btn" onclick="openSurvey()">OK</button></div>
     </div>
-
     <div class="window" id="w2" style="top:160px; left:520px; width:300px;">
         <div class="titlebar">
-            <div class="title">Program 2</div>
-            <div class="sysbuttons">
-                <button onclick="hideWin(this)">_</button>
-                <button onclick="closeWin(this)">X</button>
-            </div>
+            <div class="title"><div class="win-icon" style="background:#00ccff"></div>Low Cost</div>
+            <div class="sysbuttons"><button onclick="hideWin(this)">_</button><button onclick="closeWin(this)">X</button></div>
         </div>
-        <div class="content">
-            Line 1<br>Line 2<br>Line 3<br>Line 4<br>
-            <button class="btn" onclick="openSurvey()">OK</button>
-        </div>
+        <div class="content">Line 1<br>Line 2<br>Line 3<br>Line 4<br><button class="btn" onclick="openSurvey()">OK</button></div>
     </div>
-
     <div class="window" id="w3" style="top:260px; left:400px; width:300px;">
         <div class="titlebar">
-            <div class="title">Program 3</div>
-            <div class="sysbuttons">
-                <button onclick="hideWin(this)">_</button>
-                <button onclick="closeWin(this)">X</button>
-            </div>
+            <div class="title"><div class="win-icon" style="background:#ff66cc"></div>Sliding Scale</div>
+            <div class="sysbuttons"><button onclick="hideWin(this)">_</button><button onclick="closeWin(this)">X</button></div>
         </div>
-        <div class="content">
-            Line 1<br>Line 2<br>Line 3<br>Line 4<br>
-            <button class="btn" onclick="openSurvey()">OK</button>
-        </div>
+        <div class="content">Line 1<br>Line 2<br>Line 3<br>Line 4<br><button class="btn" onclick="openSurvey()">OK</button></div>
     </div>
 
     <!-- SURVEY WINDOW -->
     <div class="window" id="survey" style="top:150px; left:350px; width:520px; height:450px;">
         <div class="titlebar">
-            <div class="title">User Survey</div>
-            <div class="sysbuttons">
-                <button onclick="hideWin(this)">_</button>
-                <button onclick="closeWin(this)">X</button>
-            </div>
+            <div class="title"><div class="win-icon" style="background:#66ff66"></div>User Survey</div>
+            <div class="sysbuttons"><button onclick="hideWin(this)">_</button><button onclick="closeWin(this)">X</button></div>
         </div>
         <div class="content" style="height:380px; overflow-y:auto; text-align:left;">
             <form id="surveyForm">
-                <label>1. Name (Short Answer)</label><br>
-                <input type="text" name="name" required><br><br>
-
-                <label>2. Email (Short Answer)</label><br>
-                <input type="email" name="email" required><br><br>
-
-                <label>3. Favorite Website (Short Answer)</label><br>
-                <input type="text" name="website"><br><br>
-
-                <label>4. What do you like about our service? (Long Answer)</label><br>
-                <textarea name="feedback1" rows="3"></textarea><br><br>
-
-                <label>5. What should we improve? (Long Answer)</label><br>
-                <textarea name="feedback2" rows="3"></textarea><br><br>
-
-                <label>6. Any additional comments? (Long Answer)</label><br><br>
-                <textarea name="feedback3" rows="3"></textarea><br><br>
-
+                <label>1. Name (Short Answer)</label><br><input type="text" name="name" required><br><br>
+                <label>2. Email (Short Answer)</label><br><input type="email" name="email" required><br><br>
+                <label>3. Favorite Website (Short Answer)</label><br><input type="text" name="website"><br><br>
+                <label>4. What do you like about our service? (Long Answer)</label><br><textarea name="feedback1" rows="3"></textarea><br><br>
+                <label>5. What should we improve? (Long Answer)</label><br><textarea name="feedback2" rows="3"></textarea><br><br>
+                <label>6. Any additional comments? (Long Answer)</label><br><br><textarea name="feedback3" rows="3"></textarea><br><br>
                 <button class="btn" type="submit">Submit & Pay</button>
             </form>
         </div>
@@ -369,9 +358,7 @@ document.querySelectorAll('.icon').forEach(icon => {
         icon.classList.add('selected');
 
         const now = Date.now();
-        if (now - lastClick < 400 && icon.dataset.win) {
-            showWin(icon.dataset.win);
-        }
+        if (now - lastClick < 400 && icon.dataset.win) { showWin(icon.dataset.win); }
         lastClick = now;
         e.stopPropagation();
     });
@@ -406,8 +393,17 @@ document.getElementById('surveyForm').addEventListener('submit', function(e){
 function addTaskbarButton(win){
     const tb=document.getElementById('taskbarWindows');
     if(!document.getElementById('tb_'+win.id)){
-        const btn=document.createElement('div'); btn.className='tbwin'; btn.id='tb_'+win.id;
-        btn.textContent=win.querySelector('.title').textContent;
+        const btn=document.createElement('div'); 
+        btn.className='tbwin'; 
+        btn.id='tb_'+win.id;
+
+        const icon = win.querySelector('.win-icon').cloneNode(true);
+        icon.classList.add('tb-icon');
+        btn.appendChild(icon);
+
+        const text = document.createTextNode(win.querySelector('.title').textContent);
+        btn.appendChild(text);
+
         btn.onclick=()=>{win.style.display='block'; focusWin(win);};
         tb.appendChild(btn);
     }
