@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Veil Opens</title>
+
+<style>
+body {
+    margin: 0;
+    background: #140a00;
+    font-family: "Courier New", monospace;
+    color: #ffb347;
+    overflow-x: hidden;
+    text-shadow: 0 0 6px rgba(255,140,0,0.7);
+}
+
+/* Scanlines */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,140,0,0.06) 0px,
+        rgba(255,140,0,0.06) 2px,
+        transparent 2px,
+        transparent 4px
+    );
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Vignette */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 55%, rgba(0,0,0,0.8) 100%);
+    pointer-events: none;
+    z-index: 3;
+}
+
+.container {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    display: none;
+}
+
+.button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 12px;
+    background: transparent;
+    border: 2px solid #ffb347;
+    color: #ffb347;
+    cursor: pointer;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    background: #1f1000;
+    border: 1px solid #ffb347;
+    color: #ffb347;
+    font-family: inherit;
+}
+
+/* Intro screen */
+#intro {
+    position: fixed;
+    inset: 0;
+    background: #140a00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#introText {
+    white-space: pre-wrap;
+    max-width: 90%;
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    background: #ffb347;
+    margin-left: 5px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%,50%,100% { opacity:1; }
+    25%,75% { opacity:0; }
+}
+
+/* Particles */
+.particle {
+    position: fixed;
+    width: 3px;
+    height: 3px;
+    background: #ffb347;
+    opacity: 0.2;
+    border-radius: 50%;
+    animation: drift linear infinite;
+}
+
+@keyframes drift {
+    from { transform: translateY(100vh); }
+    to { transform: translateY(-10vh); }
+}
+</style>
+</head>
+<body>
+
+<script>
+for(let i=0;i<20;i++){
+    let p=document.createElement("div");
+    p.className="particle";
+    p.style.left=Math.random()*100+"vw";
+    p.style.animationDuration=(10+Math.random()*10)+"s";
+    document.body.appendChild(p);
+}
+</script>
+
+<div id="intro">
+<div id="introText"></div><div class="cursor"></div>
+</div>
+
+<div class="container" id="main">
+
+<h1>✶ THE VEIL OPENS ✶</h1>
+
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+<input type="text" name="name" placeholder="Your name, seeker..." required>
+<input type="email" name="email" placeholder="Where shall insight be delivered?" required>
+<textarea rows="5" name="message" placeholder="Now speak without hesitation..." required></textarea>
+
+<button class="button" type="submit">
+Transmit To The Oracle
+</button>
+
+</form>
+
+</div>
+
+<script>
+
+const text = `
+OFFERING RECEIVED.
+STRIPE GATEWAY CONFIRMED.
+ENERGY EXCHANGE STABILIZED...
+
+THE VEIL THINS.
+
+YOU MAY NOW SPEAK.
+`;
+
+let i = 0;
+function typeWriter() {
+    if (i < text.length) {
+        document.getElementById("introText").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 28);
+    } else {
+        setTimeout(()=>{
+            document.getElementById("intro").style.display="none";
+            document.getElementById("main").style.display="block";
+        },3800);
+    }
+}
+typeWriter();
+
+</script>
+
+</body>
+</html>
